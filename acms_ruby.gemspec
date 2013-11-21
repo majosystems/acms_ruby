@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = AcmsRuby::VERSION
   spec.authors       = ["takashi.akagi"]
   spec.email         = ["nisyu@mac.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{a-blog cms をrubyで操作したい}
+  spec.summary       = %q{acms_ruby}
   spec.homepage      = ""
   spec.license       = "MIT"
 
