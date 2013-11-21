@@ -20,6 +20,8 @@ module AcmsRuby
       username: @config.database_user,
       password: @config.database_password,
       database: @config.database_name,
+      port:     @config.database_port.to_i,
+      socket:   @config.database_sock,
     )
   end
 
