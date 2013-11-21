@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require 'acms_ruby'
+
+AcmsRuby.run *ARGV
