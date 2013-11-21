@@ -1,15 +1,8 @@
+require "active_record"
 require "acms_ruby/version"
 require "acms_ruby/config"
+require "acms_ruby/models/user"
 
 module AcmsRuby
-  extend self
-
-  def run(*argv)
-    p config_file
-  end
-
-  private
-  def config_file
-    Pathname.new("private/config.system.yaml").expand_path.to_s
-  end
+  # no
 end

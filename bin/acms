@@ -1,4 +1,40 @@
 #!/usr/bin/env ruby
 require 'acms_ruby'
+require "pathname"
+require "pry"
+
+module AcmsRuby
+  extend self
+
+  def run(*argv)
+    load_config
+    set_database_config
+    binding.pry
+  end
+
+  private
+  def set_database_config
+    ActiveRecord::Base.establish_connection(
+      adapter:  "mysql2",
+      host:     @config.database_host,
+      username: @config.database_user,
+      password: @config.database_password,
+      database: @config.database_name,
+    )
+  end
+
+  def load_config
+    config_file = default_config_file
+    unless File.exist? config_file
+      print "Config file '#{config_file}' not found.\n"
+      exit 1
+    end
+    @config = AcmsRuby::Config.new(open(config_file).read)
+  end
+
+  def default_config_file
+    Pathname.new("config.server.php").expand_path.to_s
+  end
+end
 
 AcmsRuby.run *ARGV
