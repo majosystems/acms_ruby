@@ -8,6 +8,8 @@ module AcmsRuby
 
     has_many :categories, class_name: 'Category', foreign_key: :category_blog_id, primary_key: :blog_id
     has_many :entries, class_name: 'Entry', foreign_key: :entry_blog_id, primary_key: :blog_id
+    has_many :fields, class_name: 'Field', foreign_key: :field_bid, primary_key: :blog_id
+    has_many :all_blog_fields, class_name: 'Field', foreign_key: :field_blog_id, primary_key: :blog_id
 
     create_methods ['code','status','name','domain','generated_datetime'], 'blog'
   end

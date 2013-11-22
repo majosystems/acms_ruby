@@ -25,9 +25,6 @@ module AcmsRuby
     def database_port
       @data[:DB_PORT]
     end
-    def database_sock
-      @data[:DB_SOCK]
-    end
 
     private
     def parse

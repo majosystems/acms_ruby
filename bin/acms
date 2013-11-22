@@ -14,15 +14,20 @@ module AcmsRuby
 
   private
   def set_database_config
-    ActiveRecord::Base.establish_connection(
+    settings = {
       adapter:  "mysql2",
       host:     @config.database_host,
       username: @config.database_user,
       password: @config.database_password,
       database: @config.database_name,
-      port:     @config.database_port.to_i,
-      socket:   @config.database_sock,
-    )
+    }
+    if @config.database_port.to_i > 0
+      settings[:port] = @config.database_port.to_i
+    else
+      settings[:socket] = @config.database_port
+      settings[:socket] ||= ENV['ACMS_SOCKET']
+    end
+    ActiveRecord::Base.establish_connection(settings)
   end
 
   def load_config

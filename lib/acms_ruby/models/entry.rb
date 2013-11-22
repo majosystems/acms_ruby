@@ -11,6 +11,8 @@ module AcmsRuby
     belongs_to :blog, class_name: 'Blog', foreign_key: :entry_blog_id, primary_key: :blog_id
     belongs_to :form, class_name: 'Form', foreign_key: :entry_form_id, primary_key: :form_id
 
+    has_many :fields, class_name: 'Field', foreign_key: :field_eid, primary_key: :entry_id
+
     create_methods ['code','status','title','link','datetime','start_datetime','end_datetime','posted_datetime','updated_datetime'], 'entry'
 
   end
