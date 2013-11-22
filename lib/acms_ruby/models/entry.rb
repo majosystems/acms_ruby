@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 module AcmsRuby
   class Entry < AcmsRuby::ARBase
+    include AcmsRuby::FieldSelectMethods
+
     scope :closes, -> { where(entry_status: :close) }
     scope :opens, -> { where(entry_status: :open) }
     scope :drafts, -> { where(entry_status: :draft) }

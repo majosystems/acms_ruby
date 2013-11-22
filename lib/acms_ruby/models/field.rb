@@ -9,6 +9,8 @@ module AcmsRuby
     belongs_to :user, class_name: 'User', foreign_key: :field_uid
     belongs_to :blog, class_name: 'Blog', foreign_key: :field_bid
 
+    default_scope { order(:field_sort) }
+
     create_methods ['key','value','eid','cid','uid','bid'], 'field'
   end
 end

@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 module AcmsRuby
   class User < ARBase
+    include AcmsRuby::FieldSelectMethods
+
     belongs_to :blog, class_name: 'Blog', foreign_key: :user_blog_id
 
     has_many :entries, class_name: 'Entry', foreign_key: :entry_user_id
