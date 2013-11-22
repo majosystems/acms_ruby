@@ -5,6 +5,8 @@ module AcmsRuby
     scope :opens, -> { where(blog_status: :open) }
 
     belongs_to :parent, class_name: 'Blog', foreign_key: :blog_parent, primary_key: :blog_id
+
+    has_many :categories, class_name: 'Category', foreign_key: :category_blog_id, primary_key: :blog_id
     has_many :entries, class_name: 'Entry', foreign_key: :entry_blog_id, primary_key: :blog_id
 
     create_methods ['code','status','name','domain','generated_datetime'], 'blog'

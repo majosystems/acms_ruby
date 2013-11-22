@@ -7,6 +7,7 @@ require "acms_ruby/models/entry"
 require "acms_ruby/models/blog"
 require "acms_ruby/models/category"
 require "acms_ruby/models/form"
+require "acms_ruby/models/field"
 
 module AcmsRuby
   # no
