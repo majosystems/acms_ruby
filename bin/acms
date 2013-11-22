@@ -9,6 +9,10 @@ module AcmsRuby
   def run(*argv)
     load_config
     set_database_config
+    start
+  end
+
+  def start
     binding.pry
   end
 
