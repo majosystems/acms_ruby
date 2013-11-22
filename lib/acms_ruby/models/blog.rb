@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 module AcmsRuby
   class Blog < AcmsRuby::ARBase
+    include AcmsRuby::FieldSelectMethods
+
     scope :closes, -> { where(blog_status: :close) }
     scope :opens, -> { where(blog_status: :open) }
 
