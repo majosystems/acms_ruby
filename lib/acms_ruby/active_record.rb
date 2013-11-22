@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 require "active_record"
+require "composite_primary_keys"
 
 module AcmsRuby
   class ARBase < ActiveRecord::Base
