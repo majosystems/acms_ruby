@@ -1,19 +1,17 @@
 # -*- coding: utf-8 -*-
 module AcmsRuby
-  class Entry < AcmsRuby::ActiveRecord::Base
+  class Entry < AcmsRuby::ARBase
     scope :closes, -> { where(entry_status: :close) }
     scope :opens, -> { where(entry_status: :open) }
     scope :drafts, -> { where(entry_status: :draft) }
 
     belongs_to :user, class_name: 'User', foreign_key: :entry_user_id, primary_key: :user_id
     belongs_to :last_update_user, class_name: 'User', foreign_key: :entry_last_update_user_id, primary_key: :user_id
+    belongs_to :category, class_name: 'Category', foreign_key: :entry_category_id, primary_key: :category_id
+    belongs_to :blog, class_name: 'Blog', foreign_key: :entry_blog_id, primary_key: :blog_id
+    belongs_to :form, class_name: 'Form', foreign_key: :entry_form_id, primary_key: :form_id
 
-    ['code','status','title','link','datetime','start_datetime','end_datetime','posted_datetime','updated_datetime']
-    def title
-      entry_title
-    end
-    def title=(v)
-      entry_title = v
-    end
+    create_methods ['code','status','title','link','datetime','start_datetime','end_datetime','posted_datetime','updated_datetime'], 'entry'
+
   end
 end
