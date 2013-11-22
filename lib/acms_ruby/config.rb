@@ -1,3 +1,8 @@
+
+ActiveRecord::Base.primary_key_prefix_type = :table_name_with_underscore
+ActiveRecord::Base.table_name_prefix = 'acms_'
+ActiveRecord::Base.pluralize_table_names = false
+
 module AcmsRuby
   class Config
     def initialize(text)
