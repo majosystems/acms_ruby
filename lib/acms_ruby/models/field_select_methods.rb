@@ -13,5 +13,12 @@ module AcmsRuby
         field.key
       end.uniq
     end
+
+    def image_field_names
+      field_names.collect do |name|
+        image_name = name.split('@')[0]
+        image_name if name =~ /\@/ && image_name != ''
+      end.uniq.compact
+    end
   end
 end
