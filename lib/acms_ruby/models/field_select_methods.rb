@@ -20,5 +20,12 @@ module AcmsRuby
         image_name if name =~ /\@/ && image_name != ''
       end.uniq.compact
     end
+
+    def field_group_names
+      field_names.collect do |name|
+        image_name = name.split('@')[1]
+        image_name if name =~ /^\@/
+      end.compact
+    end
   end
 end
