@@ -29,7 +29,7 @@ module AcmsRuby
     end
 
     def field_groups
-      field_group_names.map do |group_name|
+      field_group_names.collect do |group_name|
         AcmsRuby::FieldGroup.new(group_name, self)
       end
     end
