@@ -27,5 +27,11 @@ module AcmsRuby
         image_name if name =~ /^\@/
       end.compact
     end
+
+    def field_groups
+      field_group_names.map do |group_name|
+        AcmsRuby::FieldGroup.new(group_name, self)
+      end
+    end
   end
 end
