@@ -1,0 +1,10 @@
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: acms_test
+  pool: 5
+  username: root
+  password: root
+  host: localhost
+  socket: /Applications/MAMP/tmp/mysql/mysql.sock
