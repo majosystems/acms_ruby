@@ -15,8 +15,9 @@ module AcmsRuby
     def load_image
       @fields = @base.fields.where(['field_key like ?', @name+"@%"])
       image_count = @fields.collect{|f| f.field_sort }.max
-      image_count.time_with_index do |i|
-        Image.new(@name, i+1, @base)
+      @images = []
+      image_count.times do |i|
+        @images.push AcmsRuby::Image.new(@name, i+1, self)
       end
     end
 

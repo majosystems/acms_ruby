@@ -1,6 +1,8 @@
 
 module AcmsRuby
   class Image
+    attr_accessor :fields
+
     def initialize(image_name, sort_no, base)
       @base = base
       @name = image_name
@@ -14,7 +16,11 @@ module AcmsRuby
 
     def field(key)
       key = @name+'@'+key
-      @fields(field_key: key).value
+      @fields.where(field_key: key).first
+    end
+
+    def val(key)
+      field(key).value
     end
   end
 end

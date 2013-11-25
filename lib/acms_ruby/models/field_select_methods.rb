@@ -2,9 +2,16 @@
 module AcmsRuby
   module FieldSelectMethods
     def field(key, sort_no=nil)
-      return fields.where(field_key: key, field_sort: sort_no).first.value if sort_no
+      return fields.where(field_key: key, field_sort: sort_no).first if sort_no
       fields.where(field_key: key).collect do |field|
-        field.value
+        field
+      end
+    end
+
+    def val(key, sort_no=nil)
+      return field(key, sort_no) if sort_no
+      field(key).collect do |f|
+        f.value
       end
     end
 
