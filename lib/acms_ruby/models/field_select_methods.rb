@@ -33,5 +33,11 @@ module AcmsRuby
         AcmsRuby::FieldGroup.new(group_name, self)
       end
     end
+
+    def image_fields
+      image_field_names.collect do |image_name|
+        AcmsRuby::ImageField.new(image_name, self)
+      end
+    end
   end
 end
