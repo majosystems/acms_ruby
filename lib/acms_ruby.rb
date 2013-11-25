@@ -12,6 +12,7 @@ require "acms_ruby/models/blog"
 require "acms_ruby/models/category"
 require "acms_ruby/models/form"
 require "acms_ruby/models/field"
+require "acms_ruby/models/column"
 
 module AcmsRuby
   # no

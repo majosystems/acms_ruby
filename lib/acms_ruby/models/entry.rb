@@ -18,5 +18,11 @@ module AcmsRuby
 
     create_methods ['code','status','title','link','datetime','start_datetime','end_datetime','posted_datetime','updated_datetime'], 'entry'
 
+    def full_text
+      columns.texts.map do |text|
+        text.field_1
+      end.join("\n")
+    end
+
   end
 end
