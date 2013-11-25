@@ -20,7 +20,7 @@ module AcmsRuby
 
     def full_text
       columns.texts.map do |text|
-        text.field_1
+        text.text
       end.join("\n")
     end
 
