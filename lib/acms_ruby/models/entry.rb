@@ -14,6 +14,7 @@ module AcmsRuby
     belongs_to :form, class_name: 'Form', foreign_key: :entry_form_id
 
     has_many :fields, class_name: 'Field', foreign_key: :field_eid
+    has_many :columns, class_name: 'Column', foreign_key: :column_entry_id
 
     create_methods ['code','status','title','link','datetime','start_datetime','end_datetime','posted_datetime','updated_datetime'], 'entry'
 
