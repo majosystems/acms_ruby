@@ -1,4 +1,6 @@
 
+ActiveRecord::Base.default_timezone = :local
+ActiveRecord::Base.time_zone_aware_attributes = false
 ActiveRecord::Base.primary_key_prefix_type = :table_name_with_underscore
 ActiveRecord::Base.table_name_prefix = 'acms_'
 ActiveRecord::Base.pluralize_table_names = false
