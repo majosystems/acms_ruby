@@ -53,3 +53,25 @@ FactoryGirl.define do
     column_blog_id 1
   end
 end
+
+FactoryGirl.define do
+  sequence(:sequence_e_id)
+
+  factory :entry, class: AcmsRuby::Entry do
+    entry_id { FactoryGirl.generate(:sequence_e_id) }
+    entry_code "entry_code"
+    entry_form_status ""
+    entry_sort 1
+    entry_user_sort 1
+    entry_category_sort 1
+    entry_link ""
+    entry_current_rev_id 0
+    entry_last_update_user_id 0
+    entry_hash ""
+    entry_user_id 1
+    entry_form_id 0
+    entry_blog_id 1
+  end
+end
+
+
