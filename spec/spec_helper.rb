@@ -3,7 +3,6 @@
 require 'rubygems'
 require 'acms_ruby'
 require 'factory_girl'
-require 'factories'
 require 'database_cleaner'
 require 'rspec'
 
