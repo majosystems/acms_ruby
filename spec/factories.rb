@@ -29,3 +29,27 @@ FactoryGirl.define do
     category_blog_id 1
   end
 end
+
+FactoryGirl.define do
+  sequence(:sequence_col_id)
+
+  factory :column, class: AcmsRuby::Column do
+    column_id { FactoryGirl.generate(:sequence_col_id) }
+    column_sort 1
+    column_align "center"
+    column_type "text"
+    column_attr ""
+    column_group ""
+    column_size ""
+    column_field_1 "hogehoge"
+    column_field_2 ""
+    column_field_3 ""
+    column_field_4 ""
+    column_field_5 ""
+    column_field_6 ""
+    column_field_7 ""
+    column_field_8 ""
+    column_entry_id 1
+    column_blog_id 1
+  end
+end
