@@ -1,9 +1,7 @@
 
 FactoryGirl.define do
-  sequence(:sequence_b_id)
-
   factory :blog, class: AcmsRuby::Blog do
-    blog_id { FactoryGirl.generate(:sequence_b_id) }
+    blog_id { AcmsRuby::Blog.next_id }
     blog_code "blog_code"
     blog_name "blog name"
     blog_parent 0
@@ -18,7 +16,7 @@ FactoryGirl.define do
   sequence(:sequence_c_id)
 
   factory :category, class: AcmsRuby::Category do
-    category_id { FactoryGirl.generate(:sequence_c_id) }
+    category_id { AcmsRuby::Category.next_id }
     category_code "category_code"
     category_name "category name"
     category_scope "local"
@@ -34,7 +32,7 @@ FactoryGirl.define do
   sequence(:sequence_col_id)
 
   factory :column, class: AcmsRuby::Column do
-    column_id { FactoryGirl.generate(:sequence_col_id) }
+    column_id { AcmsRuby::Column.next_id }
     column_sort 1
     column_align "center"
     column_type "text"
@@ -58,7 +56,7 @@ FactoryGirl.define do
   sequence(:sequence_e_id)
 
   factory :entry, class: AcmsRuby::Entry do
-    entry_id { FactoryGirl.generate(:sequence_e_id) }
+    entry_id { AcmsRuby::Entry.next_id }
     entry_code "entry_code"
     entry_form_status ""
     entry_sort 1

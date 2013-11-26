@@ -18,7 +18,7 @@ module AcmsRuby
     end
 
     def self.next_id
-      self.all.map(&:id).max + 1
+      self.all.map(&:id).max.to_i + 1
     end
 
     def next_id
