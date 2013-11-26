@@ -12,4 +12,13 @@ describe AcmsRuby::Entry do
   it '#full_text 所属かカラムから生成されるテキストを返す' do
     expect(@entry.full_text).to eq("hogehoge\nfugafuga")
   end
+
+  it '#open! #close! #draft! でステータスを変更できる' do
+    @entry.close!
+    expect(@entry.status).to eq("close")
+    @entry.open!
+    expect(@entry.status).to eq("open")
+    @entry.draft!
+    expect(@entry.status).to eq("draft")
+  end
 end

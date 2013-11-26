@@ -25,5 +25,17 @@ module AcmsRuby
       end.join("\n")
     end
 
+    def open!
+      self.status = 'open'
+      self.save!
+    end
+    def close!
+      self.status = 'close'
+      self.save!
+    end
+    def draft!
+      self.status = 'draft'
+      self.save!
+    end
   end
 end
