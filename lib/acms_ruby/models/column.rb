@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 module AcmsRuby
   class Column < AcmsRuby::ARBase
-    ACMS_UNIT_TEXT_DELIMITER = /\:acms_unit_text_delimiter\:/
+    ACMS_UNIT_TEXT_DELIMITER = ':acms_unit_text_delimiter:'
 
     include AcmsRuby::FieldSelectMethods
 
