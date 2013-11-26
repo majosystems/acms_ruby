@@ -13,8 +13,6 @@ FactoryGirl.define do
 end
 
 FactoryGirl.define do
-  sequence(:sequence_c_id)
-
   factory :category, class: AcmsRuby::Category do
     category_id { AcmsRuby::Category.next_id }
     category_code "category_code"
@@ -29,8 +27,6 @@ FactoryGirl.define do
 end
 
 FactoryGirl.define do
-  sequence(:sequence_col_id)
-
   factory :column, class: AcmsRuby::Column do
     column_id { AcmsRuby::Column.next_id }
     column_sort 1
@@ -53,8 +49,6 @@ FactoryGirl.define do
 end
 
 FactoryGirl.define do
-  sequence(:sequence_e_id)
-
   factory :entry, class: AcmsRuby::Entry do
     entry_id { AcmsRuby::Entry.next_id }
     entry_code "entry_code"
