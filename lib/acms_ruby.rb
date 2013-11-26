@@ -1,4 +1,5 @@
 require "active_record"
+require "factory_girl"
 require "acms_ruby/version"
 require "acms_ruby/config"
 require "acms_ruby/active_record"
@@ -13,8 +14,7 @@ require "acms_ruby/models/category"
 require "acms_ruby/models/form"
 require "acms_ruby/models/field"
 require "acms_ruby/models/column"
-require "factory_girl"
-require "factories"
+require "acms_ruby/factories"
 
 module AcmsRuby
   # no
