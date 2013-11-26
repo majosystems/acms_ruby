@@ -3,8 +3,8 @@
 require 'spec_helper'
 
 describe AcmsRuby::Category do
-  it '#name' do
-    @category = FactoryGirl.create(:category)
-    expect(@category.name).to eq('category name')
+  it 'nameでカテゴリ名が取得できる' do
+    @category = FactoryGirl.create(:category, category_name: 'test name')
+    expect(@category.name).to eq('test name')
   end
 end
