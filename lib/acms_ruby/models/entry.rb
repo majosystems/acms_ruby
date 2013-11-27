@@ -6,7 +6,7 @@ module AcmsRuby
     scope :closes, -> { where(entry_status: :close) }
     scope :opens, -> { where(entry_status: :open) }
     scope :drafts, -> { where(entry_status: :draft) }
-    scope :by_blog, -> (blog){ where(blog: blog) }
+    scope :by_blog, ->(blog){ where(blog: blog) }
 
     belongs_to :user, class_name: 'User', foreign_key: :entry_user_id
     belongs_to :last_update_user, class_name: 'User', foreign_key: :entry_last_update_user_id
