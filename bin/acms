@@ -13,7 +13,7 @@ module AcmsRuby
   end
 
   def start
-    binding.pry
+    pry
   end
 
   private
