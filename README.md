@@ -1,6 +1,6 @@
 # AcmsRuby
 
-TODO: Write a gem description
+a-blog cms のデータを ActiveRecord オブジェクトとして操作したい人へ
 
 ## Installation
 
@@ -18,7 +18,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+操作したい a-blog cms がインストールされているディレクトリに移動して、以下のコマンドを実行
+
+    $ acms
 
 ## Contributing
 
