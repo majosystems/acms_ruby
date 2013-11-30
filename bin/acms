@@ -13,6 +13,14 @@ module AcmsRuby
   end
 
   def start
+    print <<EOS
+
+  acms_ruby ver.#{AcmsRuby::VERSION}
+
+  (c) 2013 Orange System Co.
+           akagi takashi
+
+EOS
     pry
   end
 
