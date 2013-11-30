@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["nisyu@mac.com"]
   spec.description   = %q{a-blog cms をrubyで操作したい}
   spec.summary       = %q{acms_ruby}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/majosystems/acms_ruby"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
