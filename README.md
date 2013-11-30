@@ -22,6 +22,27 @@ Or install it yourself as:
 
     $ acms
 
+操作例
+ユーザの情報を確認
+
+    > user = User.find 1   # ユーザーID 1 のユーザ情報取得
+    > user.name            # ユーザの名前
+
+ユーザの情報を更新
+
+    > user.name = "new name"  # ユーザの名前を設定
+    > user.save!              # DBに保存
+
+ブログの情報からエントリー情報取得までの例
+
+    > blog = Blog.find 1       # ブログID 1 のブログ取得
+    > blog.users               # ブログの所属ユーザ
+    > cates = blog.categories  # カテゴリのリストを取得
+    > category = cates[2]      # 3番目のカテゴリ取得
+    > category.name            # カテゴリの名前を確認
+    > category.entries.each do |entry| print "#{category.name},#{entry.id},#{entry.title},#{entry.user.name}\n" end
+      # ↑カテゴリ内のエントリーを、カテゴリ名,エントリID,エントリタイトル,ユーザー名 のCSV形式で表示
+
 ## Contributing
 
 1. Fork it
