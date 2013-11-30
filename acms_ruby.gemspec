@@ -6,7 +6,7 @@ require 'acms_ruby/version'
 Gem::Specification.new do |spec|
   spec.name          = "acms_ruby"
   spec.version       = AcmsRuby::VERSION
-  spec.authors       = ["takashi.akagi"]
+  spec.authors       = ["Orange System Co.", "akagi takashi"]
   spec.email         = ["nisyu@mac.com"]
   spec.description   = %q{a-blog cms をrubyで操作したい}
   spec.summary       = %q{acms_ruby}
