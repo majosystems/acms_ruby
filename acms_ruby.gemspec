@@ -27,4 +27,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "pry"
   spec.add_dependency "factory_girl"
   spec.add_dependency "mysql2"
+  spec.add_dependency "php-serialize"
 end
