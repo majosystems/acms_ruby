@@ -22,7 +22,7 @@ Or install it yourself as:
 
     $ acms
 
-local環境とかでソケットの指定がなくてつながらない時は環境変数で指定してください
+local環境とかでソケットの指定がなくてつながらない時は環境変数で指定してください（例）
 
     export ACMS_SOCKET='/Applications/MAMP/tmp/mysql/mysql.sock'
 
